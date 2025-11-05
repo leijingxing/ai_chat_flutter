@@ -34,7 +34,7 @@
 
 ```yaml
 dependencies:
-  ai_chat_flutter: ^0.0.1
+  ai_chat_flutter: ^1.0.0
 ```
 
 然后执行：

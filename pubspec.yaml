@@ -1,11 +1,29 @@
 name: ai_chat_flutter
-description: "A new Flutter project."
-version: 0.0.1
-homepage:
+description: "Customizable Flutter chat UI toolkit for building AI assistant experiences."
+version: 1.0.0
+homepage: https://github.com/leijingxing/ai_chat_flutter
+repository: https://github.com/leijingxing/ai_chat_flutter
+documentation: https://github.com/leijingxing/ai_chat_flutter#readme
+issue_tracker: https://github.com/leijingxing/ai_chat_flutter/issues
 
 environment:
   sdk: ^3.9.2
   flutter: ">=1.17.0"
+
+screenshots:
+  - description: Chat interface showcasing message list
+    path: screenshots/img.png
+  - description: Streaming response animation
+    path: screenshots/img_1.png
+  - description: Dark mode conversation preview
+    path: screenshots/img_2.png
+
+topics:
+  - flutter
+  - chat
+  - ai
+  - chatbot
+  - ui
 
 dependencies:
   flutter:
