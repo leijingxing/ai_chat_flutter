@@ -1,7 +1,4 @@
-非常好！那我帮你直接写出一个完整、专业的 `README.md` 中文文档，
-适合发布到 **GitHub / pub.dev**，风格和结构都遵循开源标准👇
 
----
 
 # 🧠 ai_chat_flutter
 
