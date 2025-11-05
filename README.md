@@ -1,5 +1,3 @@
-
-
 # 🧠 ai_chat_flutter
 
 一个 **可定制的 Flutter AI 对话界面组件库**，用于快速构建类似 ChatGPT、Claude、Gemini 等智能对话界面。
@@ -18,6 +16,16 @@
 
 ---
 
+## 📸 示例截图
+
+![对话主界面](screenshots/img.png)
+![流式回复效果](screenshots/img_1.png)
+![深色模式界面](screenshots/img_2.png)
+
+> 将截图文件放入仓库根目录下的 `screenshots/` 文件夹即可由 README 自动引用。
+
+---
+
 ## 🚀 快速开始
 
 ### 1️⃣ 添加依赖
@@ -26,7 +34,7 @@
 
 ```yaml
 dependencies:
-  ai_chat_flutter: ^0.1.0
+  ai_chat_flutter: ^0.0.1
 ```
 
 然后执行：
@@ -82,7 +90,7 @@ class _ChatExamplePageState extends State<ChatExamplePage> {
   void initState() {
     super.initState();
     _controller = ChatController(
-      provider: MockAiProvider(), // 示例Provider，可自定义实现
+      provider: MockAiProvider(), // 示例 Provider，可自定义实现
     );
   }
 
@@ -100,13 +108,13 @@ class _ChatExamplePageState extends State<ChatExamplePage> {
 
 ## 💡 主要组件介绍
 
-| 组件               | 说明                |
-| ---------------- | ----------------- |
-| `ChatView`       | 对话整体组件，包含消息列表与输入框 |
-| `ChatController` | 管理消息流与状态，支持流式回调   |
-| `ChatMessage`    | 消息数据模型（角色、内容、状态）  |
-| `MessageBubble`  | 消息气泡渲染，支持自定义样式    |
-| `MessageInput`   | 输入栏组件，支持发送、加载、重试  |
+| 组件 | 说明 |
+| --- | --- |
+| `ChatView` | 对话整体组件，包含消息列表与输入框 |
+| `ChatController` | 管理消息流与状态，支持流式回调 |
+| `ChatMessage` | 消息数据模型（角色、内容、状态） |
+| `MessageBubble` | 消息气泡渲染，支持自定义样式 |
+| `MessageInput` | 输入栏组件，支持发送、加载、重试 |
 
 ---
 
@@ -132,17 +140,17 @@ ChatView(
 
 框架内置多种状态，用于区分消息生命周期：
 
-| 状态  | 枚举值                       | 说明         |
-| --- | ------------------------- | ---------- |
-| 发送中 | `MessageStatus.sending`   | 用户刚发送，等待响应 |
-| 流式中 | `MessageStatus.streaming` | AI 正在逐字输出  |
-| 已完成 | `MessageStatus.sent`      | AI 回复完成    |
-| 失败  | `MessageStatus.error`     | 请求失败或超时    |
+| 状态 | 枚举值 | 说明 |
+| --- | --- | --- |
+| 发送中 | `MessageStatus.sending` | 用户刚发送，等待响应 |
+| 流式中 | `MessageStatus.streaming` | AI 正在逐字输出 |
+| 已完成 | `MessageStatus.sent` | AI 回复完成 |
+| 失败 | `MessageStatus.error` | 请求失败或超时 |
 
 状态可通过 `ChatController` 更新，例如：
 
 ```dart
-controller.addUserMessage("你好");
+controller.addUserMessage('你好');
 await controller.sendAndStream();
 ```
 
@@ -166,8 +174,10 @@ class MyAiProvider implements AiProvider {
   }
 
   @override
-  Future<String> complete({required List<ChatMessage> messages}) async {
-    return "这是完整回复示例";
+  Future<String> complete({
+    required List<ChatMessage> messages,
+  }) async {
+    return '这是完整回复示例';
   }
 }
 ```
@@ -181,11 +191,13 @@ ai_chat_flutter/
   lib/
     ai_chat_flutter.dart
     src/
-      controller/
+      controllers/
       widgets/
       models/
   example/
-    main.dart
+    lib/
+      main.dart
+  screenshots/
 ```
 
 ---
@@ -214,5 +226,4 @@ flutter run
 
 ---
 
-是否希望我帮你加上一个 **`example/main.dart`** 的完整示例文件（含输入栏、气泡UI、流式动画效果）？
-那样你可以直接复制进包里跑通演示。
+如果你在发版前需要帮助，例如完善 `CHANGELOG.md` 或配置 `LICENSE`，可以继续告诉我。
